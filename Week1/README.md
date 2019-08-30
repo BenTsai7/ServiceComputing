@@ -15,18 +15,18 @@ Let’s Go！
 2. 理解系统工程师面临的困境
 3. 理解自动化安装、管理（DevOps）在云应用中的重要性
 
-![img](https://pmlpml.github.io/unity3d-learning/images/drf/info.png) 本实验需要一定的网络知识和系统方面经验，如无法独立完成，请积极与同学协作或到技术群咨询。
+![img](assets/info.png) 本实验需要一定的网络知识和系统方面经验，如无法独立完成，请积极与同学协作或到技术群咨询。
 
 ## 2、实验环境与要求
 
-![img](https://pmlpml.github.io/unity3d-learning/images/drf/info.png) 实验需要硬件虚拟化（AMD-V 或 Intel-VT）支持，部分旧笔记本不支持。
+![img](assets/info.png) 实验需要硬件虚拟化（AMD-V 或 Intel-VT）支持，部分旧笔记本不支持。
 
 - 用户通过互联网，使用微软远程桌面，远程访问你在PC机上创建的虚拟机
 - 虚拟机操作系统 Centos，Ubuntu，或 你喜欢的 Linux 发行版，能使用 NAT 访问外网。
 
 ## 3、实验内容
 
-![img](https://pmlpml.github.io/unity3d-learning/images/drf/info.png) 对于系统工程师最大的困扰就是复杂的硬件和软件环境。本实验原则上支持 MAC OS, Window, 或 Linux， 但是你会遇到各种各样的操作、配置和网络问题。目前还不能给你一个完整地、详尽地操作决解方案。
+![img](assets/info.png) 对于系统工程师最大的困扰就是复杂的硬件和软件环境。本实验原则上支持 MAC OS, Window, 或 Linux， 但是你会遇到各种各样的操作、配置和网络问题。目前还不能给你一个完整地、详尽地操作决解方案。
 
 1. 安装 VirtualBox
 
@@ -117,24 +117,24 @@ Let’s Go！
 
 首先安装好VirtualBox，然后在网络管理器设置一张虚拟网卡，此网卡用于连接虚拟主机与真实主机，使得真实主机能使用其服务。
 
-![1566898868112](C:\Users\Ben Tsai\AppData\Roaming\Typora\typora-user-images\1566898868112.png)
+![1566898868112](assets\1566898868112.png)
 
 如图第二张网卡为虚拟网卡，ip设为192.168.100.1，为主机虚拟网的ip
 
 接着在VirtualBox上安装Centos虚拟机，使用yum update更新内核。
 接着在Centos终端进入配置网络的UI界面 nmtui，配置第二块网卡地址。
 
-![1566899164454](C:\Users\Ben Tsai\AppData\Roaming\Typora\typora-user-images\1566899164454.png)
+![1566899164454](assets\1566899164454.png)
 
 将虚拟机的第二块网卡地址设为192.168.100.2，网关设为192.168.100.1，网关即为虚拟网卡的本机地址。
 
 同时启动其连接。
 
-![1566899272937](C:\Users\Ben Tsai\AppData\Roaming\Typora\typora-user-images\1566899272937.png)
+![1566899272937](assets\1566899272937.png)
 
 此时在本机上测试ping 192.168.100.2的虚拟机的连通情况，发现可以成功连通。
 
-![1566899385917](C:\Users\Ben Tsai\AppData\Roaming\Typora\typora-user-images\1566899385917.png)
+![1566899385917](assets\1566899385917.png)
 
 接着使用git bash ssh 访问该虚拟机。在访问虚拟机前，首先要开启虚拟机的ssh服务。具体操作可参考这篇博客：
 
@@ -142,7 +142,7 @@ https://www.cnblogs.com/maowenqiang/articles/7729246.html
 
 接着在主机上使用git bash ssh访问该虚拟机，访问成功。
 
-![1566899554771](C:\Users\Ben Tsai\AppData\Roaming\Typora\typora-user-images\1566899554771.png)
+![1566899554771](assets\1566899554771.png)
 
 最后来实现远程连接桌面访问。
 
@@ -157,11 +157,11 @@ https://www.cnblogs.com/maowenqiang/articles/7729246.html
 
 接着在主机上进行远程登陆，成功进行远程登陆，结果如下：
 
-![1566900027180](C:\Users\Ben Tsai\AppData\Roaming\Typora\typora-user-images\1566900027180.png)
+![1566900027180](assets\1566900027180.png)
 
 
 
-![1566900279142](C:\Users\Ben Tsai\AppData\Roaming\Typora\typora-user-images\1566900279142.png)
+![1566900279142](assets\1566900279142.png)
 
 **可选博客**：
 
