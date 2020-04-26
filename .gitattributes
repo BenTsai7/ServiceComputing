@@ -1,2 +1,2 @@
 *.md linguist-language=Go
-*.png linguist-language=Go
+*.tpl linguist-language=Go
